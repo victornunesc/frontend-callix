@@ -1,12 +1,12 @@
 import { useSpaceX } from "./providers/spacex.providers";
 
 function App() {
-  const { launches, getLatestLaunch } = useSpaceX();
+  const { launches, getLatestLaunch, getNextLaunch } = useSpaceX();
 
   return (
     <>
       <div>
-        <button>Próximo Lançamento</button>
+        <button onClick={getNextLaunch}>Próximo Lançamento</button>
         <button onClick={getLatestLaunch}>Último lançamento</button>
         <button>Próximos lançamentos</button>
         <button>Lançamentos passados</button>
