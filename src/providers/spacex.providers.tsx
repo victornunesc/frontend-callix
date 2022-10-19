@@ -22,6 +22,7 @@ interface ISpaceXProviderData {
   launches: ILaunch[];
   getLatestLaunch: () => Promise<void>;
   getNextLaunch: () => Promise<void>;
+  getUpcomingLaunches: () => Promise<void>;
 }
 
 const SpaceXContext = createContext<ISpaceXProviderData>(
@@ -59,9 +60,18 @@ export const SpaceXProvider = ({ children }: ISpaceXProviderProps) => {
       .catch((err) => console.log(err));
   };
 
+  const getUpcomingLaunches = async () => {
+    apiSpaceX
+      .get("/v5/launches/upcoming")
+      .then((response) => {
+        setLaunches(response.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <SpaceXContext.Provider
-      value={{ launches, getNextLaunch, getLatestLaunch }}
+      value={{ launches, getNextLaunch, getLatestLaunch, getUpcomingLaunches }}
     >
       {children}
     </SpaceXContext.Provider>
