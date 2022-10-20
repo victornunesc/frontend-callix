@@ -11,6 +11,7 @@ export const Title = styled.h1`
   color: #fff;
   margin: 14px;
   font-size: 3rem;
+  font-family: "Cinzel", serif;
 `;
 
 export const Nav = styled.nav`

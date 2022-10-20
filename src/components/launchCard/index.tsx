@@ -22,10 +22,14 @@ export const LaunchCard = ({
         <p>Data: {date.toLocaleString()}</p>
         <p>Numero de voos: {flight_number}</p>
         <p>
-          wikipedia:{" "}
-          <a href={links.wikipedia} target="_blank" rel="noopener noreferrer">
-            Clique Aqui
-          </a>
+          Wikipedia:{" "}
+          {links.wikipedia ? (
+            <a href={links.wikipedia} target="_blank" rel="noopener noreferrer">
+              Clique Aqui
+            </a>
+          ) : (
+            <span>Não disponível</span>
+          )}
         </p>
       </Info>
     </Card>

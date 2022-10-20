@@ -7,11 +7,10 @@ export const Card = styled.div`
   justify-content: flex-start;
   max-width: 386px;
   margin: 12px 12px;
-  background: rgba(240, 137, 39, 0.09);
+  background: rgb(197 181 165 / 12%);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.7px);
-  -webkit-backdrop-filter: blur(3.7px);
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(5.7px);
   border: 1px solid rgb(237 216 196 / 75%);
   padding: 4px;
 
@@ -38,9 +37,15 @@ export const Info = styled.div`
   a:visited {
     color: #c1b199;
   }
+
+  p {
+    font-family: "Roboto", sans-serif;
+  }
 `;
 
 export const Title = styled.h3`
   font-size: 19px;
   text-align: center;
+  padding: 5px;
+  font-family: "DM Mono", monospace;
 `;
