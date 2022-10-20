@@ -33,7 +33,7 @@ export const SpaceXProvider = ({ children }: ISpaceXProviderProps) => {
 
   const getLatestLaunch = async () => {
     apiSpaceX
-      .get("/v5/launches/latest")
+      .get("/spacex/launches/latest")
       .then((response) => {
         setLaunches([response.data]);
       })
@@ -42,7 +42,7 @@ export const SpaceXProvider = ({ children }: ISpaceXProviderProps) => {
 
   const getNextLaunch = async () => {
     apiSpaceX
-      .get("/v5/launches/next")
+      .get("/spacex/launches/next")
       .then((response) => {
         setLaunches([response.data]);
       })
@@ -51,7 +51,7 @@ export const SpaceXProvider = ({ children }: ISpaceXProviderProps) => {
 
   const getUpcomingLaunches = async () => {
     apiSpaceX
-      .get("/v5/launches/upcoming")
+      .get("/spacex/launches/upcoming")
       .then((response) => {
         setLaunches(response.data);
       })
@@ -60,7 +60,7 @@ export const SpaceXProvider = ({ children }: ISpaceXProviderProps) => {
 
   const getPastLaunches = async () => {
     apiSpaceX
-      .get("/v5/launches/past")
+      .get("/spacex/launches/past")
       .then((response) => {
         setLaunches(response.data);
       })
