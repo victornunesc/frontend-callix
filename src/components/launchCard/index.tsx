@@ -23,9 +23,13 @@ export const LaunchCard = ({
         <p>Numero de voos: {flight_number}</p>
         <p>
           Wikipedia:{" "}
-          <a href={links.wikipedia} target="_blank" rel="noopener noreferrer">
-            Clique Aqui
-          </a>
+          {links.wikipedia ? (
+            <a href={links.wikipedia} target="_blank" rel="noopener noreferrer">
+              Clique Aqui
+            </a>
+          ) : (
+            <span>Não disponível</span>
+          )}
         </p>
       </Info>
     </Card>
