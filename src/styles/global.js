@@ -4,9 +4,10 @@ import spaceXBackground from "../assets/spacex-background.jpg";
 const GlobalStyle = createGlobalStyle`
     :root {
         /* COLORS */
-        --color-primary: #FDD6B6;
-        --color-primary-dark: #8E2828;
-        
+        --color-primary: #F5F5F5;
+        --color-primary-dark: ##95A0AA;
+        --color-secondary: #F08927
+
         --color-utility-success: #95C06E;
         --color-utility-danger: #D77B7B;
         

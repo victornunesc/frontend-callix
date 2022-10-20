@@ -1,6 +1,6 @@
 import { LaunchCard } from "../../components/launchCard";
 import { useSpaceX } from "../../providers/spacex.providers";
-import { Container } from "./style";
+import { Container, Title, Button, Nav } from "./style";
 
 export const Home = () => {
   const {
@@ -13,13 +13,13 @@ export const Home = () => {
 
   return (
     <Container>
-      <h1>Space - CalliX</h1>
-      <div>
-        <button onClick={getNextLaunch}>Próximo Lançamento</button>
-        <button onClick={getLatestLaunch}>Último lançamento</button>
-        <button onClick={getUpcomingLaunches}>Próximos lançamentos</button>
-        <button onClick={getPastLaunches}>Lançamentos passados</button>
-      </div>
+      <Title>Space - CalliX</Title>
+      <Nav>
+        <Button onClick={getNextLaunch}>Próximo Lançamento</Button>
+        <Button onClick={getLatestLaunch}>Último lançamento</Button>
+        <Button onClick={getUpcomingLaunches}>Próximos lançamentos</Button>
+        <Button onClick={getPastLaunches}>Lançamentos passados</Button>
+      </Nav>
       <div>
         {launches.map((launch) => (
           <LaunchCard
