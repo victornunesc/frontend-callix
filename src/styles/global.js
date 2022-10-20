@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         background-image: url(${spaceXBackground});
+        background-color: var(--color-black);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
