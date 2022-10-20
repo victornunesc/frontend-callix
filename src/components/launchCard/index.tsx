@@ -1,5 +1,6 @@
 import { ILaunch } from "../../interfaces";
 import { Card, Info, Logo, Title } from "./style";
+import spacex from "../../assets/spacex-159.png";
 
 export const LaunchCard = ({
   links,
@@ -11,7 +12,11 @@ export const LaunchCard = ({
 
   return (
     <Card>
-      <Logo src={links.patch.small} alt="logo" />
+      {links.patch.small ? (
+        <Logo src={links.patch.small} alt="logo" />
+      ) : (
+        <Logo src={spacex} alt="logo" />
+      )}
       <Info>
         <Title>{name}</Title>
         <p>Data: {date.toLocaleString()}</p>

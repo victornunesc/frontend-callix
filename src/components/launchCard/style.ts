@@ -5,6 +5,7 @@ export const Card = styled.div`
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
+  max-width: 386px;
   margin: 12px 12px;
   background: rgba(240, 137, 39, 0.09);
   border-radius: 16px;
@@ -13,10 +14,15 @@ export const Card = styled.div`
   -webkit-backdrop-filter: blur(3.7px);
   border: 1px solid rgb(237 216 196 / 75%);
   padding: 4px;
+
+  @media screen and (min-width: 822px) {
+    width: 386px;
+  }
 `;
 
 export const Logo = styled.img`
-  max-width: 130px;
+  width: 130px;
+  height: 130px;
 `;
 
 export const Info = styled.div`
