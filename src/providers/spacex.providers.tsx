@@ -1,21 +1,9 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { ILaunch } from "../interfaces";
 import apiSpaceX from "../services/api";
 
 interface ISpaceXProviderProps {
   children: ReactNode;
-}
-
-interface ILaunch {
-  id: string;
-  name: string;
-  flight_number: number;
-  links: {
-    patch: {
-      small: string;
-    };
-    wikipedia: string;
-  };
-  sucess: boolean;
 }
 
 interface ISpaceXProviderData {
