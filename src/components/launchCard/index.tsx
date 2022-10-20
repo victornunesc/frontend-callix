@@ -1,5 +1,5 @@
 import { ILaunch } from "../../interfaces";
-import { Card, Logo } from "./style";
+import { Card, Info, Logo, Title } from "./style";
 
 export const LaunchCard = ({
   links,
@@ -12,14 +12,17 @@ export const LaunchCard = ({
   return (
     <Card>
       <Logo src={links.patch.small} alt="logo" />
-      <div>
-        <p>{name}</p>
+      <Info>
+        <Title>{name}</Title>
         <p>Data: {date.toLocaleString()}</p>
         <p>Numero de voos: {flight_number}</p>
         <p>
-          wikipedia: <a href={links.wikipedia}>Clique Aqui</a>
+          wikipedia:{" "}
+          <a href={links.wikipedia} target="_blank" rel="noopener noreferrer">
+            Clique Aqui
+          </a>
         </p>
-      </div>
+      </Info>
     </Card>
   );
 };

@@ -1,6 +1,6 @@
 import { LaunchCard } from "../../components/launchCard";
 import { useSpaceX } from "../../providers/spacex.providers";
-import { Container, Title, Button, Nav } from "./style";
+import { Container, Title, Button, Nav, DisplaySection } from "./style";
 
 export const Home = () => {
   const {
@@ -20,7 +20,7 @@ export const Home = () => {
         <Button onClick={getUpcomingLaunches}>Próximos lançamentos</Button>
         <Button onClick={getPastLaunches}>Lançamentos passados</Button>
       </Nav>
-      <div>
+      <DisplaySection>
         {launches.map((launch) => (
           <LaunchCard
             key={launch.id}
@@ -30,7 +30,7 @@ export const Home = () => {
             date_unix={launch.date_unix}
           />
         ))}
-      </div>
+      </DisplaySection>
     </Container>
   );
 };

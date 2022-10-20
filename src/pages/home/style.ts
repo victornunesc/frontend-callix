@@ -7,6 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
+  text-align: center;
   color: #fff;
   margin: 14px;
   font-size: 3rem;
@@ -28,7 +29,7 @@ export const Button = styled.button`
   border: 2px solid white;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--color-primary);
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -37,12 +38,25 @@ export const Button = styled.button`
   margin: 5px;
 
   &:hover {
-    background: linear-gradient(to bottom, white 5%, white 100%);
-    color: #f08927;
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 5%,
+      var(--color-primary) 100%
+    );
+    color: var(--color-secondary);
   }
 
   &:active {
     position: relative;
     top: 1px;
+  }
+`;
+
+export const DisplaySection = styled.section`
+  @media screen and (min-width: 822px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 821px;
   }
 `;

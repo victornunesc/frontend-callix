@@ -5,8 +5,8 @@ const GlobalStyle = createGlobalStyle`
     :root {
         /* COLORS */
         --color-primary: #F5F5F5;
-        --color-primary-dark: ##95A0AA;
-        --color-secondary: #F08927
+        --color-primary-dark: #95A0AA;
+        --color-secondary: #F08927;
 
         --color-utility-success: #95C06E;
         --color-utility-danger: #D77B7B;
@@ -34,11 +34,11 @@ const GlobalStyle = createGlobalStyle`
 
     /* SCROLLBAR  */
     ::-webkit-scrollbar {
-        width: 4px;
+        width: 6px;
     }
     
     ::-webkit-scrollbar-thumb {
-        background-color: var(--color-primary);
+        background-color: var(--color-secondary);
         border-radius: 4px;
     }
     
