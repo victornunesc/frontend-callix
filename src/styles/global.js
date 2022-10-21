@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: fixed;
         transition: .3s;
+        background-position: center;
     }
 
     /* SCROLLBAR  */
